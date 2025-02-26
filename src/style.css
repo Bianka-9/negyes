@@ -1,4 +1,4 @@
-.container{
+.card{
     width: 100px;
     height: 140px;
     background-color: blueviolet;
@@ -24,6 +24,59 @@
     top: 150px;
 }
 
-.cards{
-    position: relative;
+#card06{
+    left: 120px;
+    top: 150px;
 }
+
+#card07{
+    left: 240px;
+    top: 150px;
+}
+
+#card08{
+    left: 360px;
+    top: 150px;
+}
+
+#card09{
+    top: 300px;
+}
+
+#card10{
+    left: 120px;
+    top: 300px;
+}
+
+#card11{
+    left: 240px;
+    top: 300px;
+}
+
+#card12{
+    left: 360px;
+    top: 300px;
+}
+
+#card13{
+    top: 450px;
+}
+
+#card14{
+    left: 120px;
+    top: 450px;
+}
+
+#card15{
+    left: 240px;
+    top: 450px;
+}
+
+#card16{
+    left: 360px;
+    top: 450px;
+}
+
+ .cards{
+    position: relative;
+ }
