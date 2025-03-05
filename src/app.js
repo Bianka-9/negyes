@@ -15,15 +15,28 @@ var content = [
 ]
 
 var first = "";
+var firstIndex = -1;
 var counter = 0;
 const result = document.querySelector("#result")
 const msg = document.querySelector("#msg")
 
+msg.addEventListener("click",()=>{
+    msg.style.display ="none"
+    for(let i=0; i<16; i++){
+        cardArray[i].innerHTML = ""
+        result.innetHTML = "";
+        first = ""
+        firstIndex =-1
+    }
+})
+
 for(let i=0; i<16; i++){
     const card = document.querySelector(idArray[i])
     card.setAttribute("data-content" , content[i]);
+    card.setAttribute("data-index", i)
     card.addEventListener("click", (event)=>{
         const content = event.target.getAttribute("data-content")
+        const index = event.target.getAttribute("data-index")
         console.log(content)
         const span ='<span class="place"></span>';
         event.target.innerHTML = span + content
@@ -37,10 +50,14 @@ for(let i=0; i<16; i++){
                 result.innerHTML = counter;
                 
             } else{
+                if(firstIndex == index){
+                    alert("NE CSALJ HALLO")
+
+                }else{
                 console.log(counter)
                 console.log("MEGTALÁLTAD")
                 msg.style.display ="block"
-                
+                }
             }
             
         }
