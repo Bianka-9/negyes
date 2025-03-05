@@ -14,11 +14,36 @@ var content = [
     "F", "H", "E", "M",
 ]
 
+var first = "";
+var counter = 0;
+const result = document.querySelector("#result")
+const msg = document.querySelector("#msg")
+
 for(let i=0; i<16; i++){
     const card = document.querySelector(idArray[i])
     card.setAttribute("data-content" , content[i]);
     card.addEventListener("click", (event)=>{
-        console.log(event.target.getAttribute("data-content"))
+        const content = event.target.getAttribute("data-content")
+        console.log(content)
+        const span ='<span class="place"></span>';
+        event.target.innerHTML = span + content
+        if (first.length==0) {
+            console.log("üres")
+            first = content
+            result.innerHTML =counter;
+        } else{
+            if (first != content){
+                counter++
+                result.innerHTML = counter;
+                
+            } else{
+                console.log(counter)
+                console.log("MEGTALÁLTAD")
+                msg.style.display ="block"
+                
+            }
+            
+        }
     })
     cardArray.push(card);
 }
